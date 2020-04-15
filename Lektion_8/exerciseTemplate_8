@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+<!--Det er denne side der skal styles -->
+<h1>Hello World</h1>
+
+<p>paragraph</p>
+
+<div>
+<h2 id="personalFeatures"></h2>
+	<ol>
+		<li>glad</li>
+
+		<li>glad</li>
+
+		<li>glad</li>
+
+		<li>glad</li>
+
+		<li>glad</li>
+
+		<li>glad</li>
+
+		<li>glad</li>
+	</ol>
+
+</div>
+
+
+<div>
+<table>
+	<tr>
+		<td>test</td>
+		<td>tester</td>
+		<td>done</td>
+	</tr>
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

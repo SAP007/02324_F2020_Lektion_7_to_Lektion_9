@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>TODO List</title>
+
+</head>
+<body>
+
+<h1>Indkøbsliste</h1>
+
+<input type="text" id="add_item" name="tilføj" placeholder="tilføj varer">
+<button type="button" onclick="updateList()" >tilføj</button>
+
+<ol id="modify_list">
+	
+</ol>
+
+<p>slet et element fra listen</p>
+<input type="text" id="remove_item" name="remove" placeholder="slet varer med nr">
+<button type="button" onclick="deleteItem()" >Fjern</button>
+
+</body>
+
+<script type="text/javascript">
+	var toDoList = document.getElementById('modify_list');
+	
+	
+	function createItem(){
+		var li = document.createElement('li');
+		li.appendChild(document.createTextNode(getItem()));
+		
+		var checkbox = document.createElement('input');
+		
+		checkbox.setAttribute('type', 'checkbox');
+
+		var button = document.createElement('button');
+
+
+
+
+		button.innerHTML="Slet";
+		li.appendChild(checkbox);
+		li.appendChild(button);
+		
+
+		toDoList.appendChild(li);
+
+	}
+
+	function getItem(){
+		var item = document.getElementById('add_item').value;
+		return item;
+	}
+
+
+	function updateList(){
+		var item = document.getElementById('add_item').value;
+		
+
+		if (item != "") {
+			createItem();
+
+		}else{
+			alert("nothing to add");
+		}
+		//reset input text so it is empty
+		document.getElementById('add_item').value=''
+	}
+
+	function deleteItem(){
+		var item_id = document.getElementById('remove_item').value;
+
+		var list = document.getElementById("modify_list");
+  		list.removeChild(list.childNodes[item_id]);
+	}
+
+
+
+</script>
+
+</html>
