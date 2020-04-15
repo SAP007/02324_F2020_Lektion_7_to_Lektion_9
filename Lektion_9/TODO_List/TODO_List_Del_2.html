@@ -25,7 +25,6 @@
 <script type="text/javascript">
 	var toDoList = document.getElementById('modify_list');
 	
-	
 	function createItem(){
 		var li = document.createElement('li');
 		li.appendChild(document.createTextNode(getItem()));
@@ -36,10 +35,13 @@
 
 		var button = document.createElement('button');
 
-
-
-
 		button.innerHTML="Slet";
+
+		//EventListener som fjerner liste element, når der klikkes på "Slet" knappen
+		button.addEventListener('click', function(e) {
+			this.parentNode.parentNode.removeChild(this.parentNode);
+		});
+
 		li.appendChild(checkbox);
 		li.appendChild(button);
 		
