@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TODO List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="todoFunc.js" ></script>
+
+</head>
+<body>
+
+<h1>To Do List</h1>
+<p>Opret en todo ved at skrive et id og en titel</p>
+<form id="createTodoForm" name="createTodoFrom">
+    <input type="number" id="id" name="id" placeholder="id">
+    <input type="text" id="add_item" name="tilføj" placeholder="tilføj varer">
+    <button class="btn" type="button" id="updateKnap" > tilføj </button>
+</form>
+
+<ul id="modify_list">
+
+</ul>
+
+<p>Slet en todo ved at skrive et id</p>
+<input type="text" id="remove_item" placeholder="id">
+<button id="remove_id"onclick="deleteItem();">fjern</button>
+
+
+
+<form id ="updateElem">
+    <input type="number" id="update_id" placeholder="id">
+    <input type="text" id="update_name" placeholder="Ny værdi">
+    <button type="button" id="update_btn"> Opdatér </button>
+</form>
+</body>
+
+
+</html>
